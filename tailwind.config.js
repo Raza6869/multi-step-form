@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,9 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      "purple-mid": "#633bbc",
-      "purple-light": "#8257e5",
-      "sucess-color": "#1D8841",
+      colors: {
+        "purple-mid": "#633bbc",
+        "purple-light": "#8257e5",
+        "sucess-color": "#1D8841",
+      },
     },
   },
   plugins: [],
