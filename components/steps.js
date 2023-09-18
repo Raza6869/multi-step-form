@@ -1,6 +1,11 @@
+"use client";
+import { usePathname } from "next/navigation";
+
 import { titillium } from "@/utils/fonts/fonts-google";
 
 export default function Steps({ stepName, stepNumber }) {
+  const pathname = usePathname();
+
   return (
     <div className="flex items-center font-bold gap-2">
       <span
