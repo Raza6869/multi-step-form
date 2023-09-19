@@ -9,7 +9,7 @@ export default function InputText({ labelText, id, placeholder }) {
         placeholder={placeholder}
         id={id}
         name="contact"
-        className=" h-[56px] py-2 px-4 border-2 "
+        className=" h-[56px] py-2 px-4 rounded-[2px] border-2 hover:border-purple-mid transition-all ease-linear "
       />
     </div>
   );
