@@ -7,13 +7,20 @@ export default function ContactForm() {
         labelText="Nome"
         placeholder="Como prefere ser chamado"
         id="name"
+        name="contact"
       />
       <InputText
         labelText="Telefone"
         placeholder="Digite seu numero de WhatsApp"
         id="phone"
+        name="contact"
       />
-      <InputText labelText="E-mail" placeholder="Digite seu e-mail" id="mail" />
+      <InputText
+        labelText="E-mail"
+        placeholder="Digite seu e-mail"
+        id="mail"
+        name="contact"
+      />
     </form>
   );
 }
