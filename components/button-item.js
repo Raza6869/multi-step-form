@@ -1,9 +1,7 @@
-import Link from "next/link";
-
-export default function ButtonItem({ style, name, link, click }) {
+export default function ButtonItem({ style, name, click }) {
   return (
-    <Link href={link} className={style} onClick={click}>
+    <button type="submit" className={style}>
       {name}
-    </Link>
+    </button>
   );
 }

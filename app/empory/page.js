@@ -1,6 +1,8 @@
-import ButtonSection from "@/components/buttons-section";
+"use client";
+
 import EmporyForm from "@/components/empory-form";
 import StepSection from "@/components/step-section";
+import { EmporyProvider } from "@/context/EmporyProvider";
 
 export default function Enterprise() {
   return (
@@ -8,8 +10,9 @@ export default function Enterprise() {
       <div className="w-[592px] p-8 bg-white items-start flex flex-col gap-8 border-2 border-gray-100 rounded-[6px]">
         <StepSection />
         <span id="divider" className="w-full bg-gray-100 h-[1px]"></span>
-        <EmporyForm />
-        <ButtonSection />
+        <EmporyProvider>
+          <EmporyForm />
+        </EmporyProvider>
       </div>
     </main>
   );

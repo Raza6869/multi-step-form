@@ -1,35 +1,55 @@
 import { useContactContext } from "@/hooks/useContactContext";
-import InputText from "./input-text";
+import ButtonSection from "@/components/buttons-section";
 
 export default function ContactForm() {
-  const { register } = useContactContext();
+  const { register, handleSubmit, onSubmit } = useContactContext();
 
   return (
-    <form className="w-full flex flex-col gap-4">
-      <InputText
-        labelText="Nome"
-        placeholder="Como prefere ser chamado"
-        id="name"
-        name="contact"
-        style="input-text"
-        {...register("name", { required: true })}
-      />
-      <InputText
-        labelText="Telefone"
-        placeholder="Digite seu numero de WhatsApp"
-        id="phone"
-        name="contact"
-        style="input-text"
-        {...register("phone", { required: true })}
-      />
-      <InputText
-        labelText="E-mail"
-        placeholder="Digite seu e-mail"
-        id="mail"
-        name="contact"
-        style="input-text"
-        {...register("mail", { required: true })}
-      />
+    <form
+      className="w-full flex flex-col gap-4"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <div className="flex flex-col gap-1">
+        <label for="name" className="font-bold">
+          Nome
+        </label>
+        <input
+          type="text"
+          placeholder="Como prefere ser chamado"
+          id="name"
+          name="contact"
+          className="input-text"
+          {...register("name")}
+        />
+      </div>
+      <div className="flex flex-col gap-1">
+        <label for="phone" className="font-bold">
+          Telefone
+        </label>
+        <input
+          type="text"
+          placeholder="Digite seu número do Whatsapp"
+          id="phone"
+          name="contact"
+          className="input-text"
+          {...register("phone")}
+        />
+      </div>
+      <div className="flex flex-col gap-1">
+        <label for="mail" className="font-bold">
+          E-mail
+        </label>
+        <input
+          type="text"
+          placeholder="Digite seu e-mail"
+          id="mail"
+          name="contact"
+          className="input-text"
+          {...register("mail")}
+        />
+
+        <ButtonSection />
+      </div>
     </form>
   );
 }

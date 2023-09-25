@@ -15,3 +15,23 @@
 .input-text-error {
   @apply h-[56px] py-2 px-4 rounded-[2px] border-2 border-red-600 transition-all ease-linear;
 }
+
+.input-area-text {
+  @apply h-[100px] py-2 px-4 rounded-[2px] border-2 hover:border-purple-mid transition-all ease-linear;
+}
+
+.input-area-text-error {
+  @apply h-[100px] py-2 px-4 rounded-[2px] border-2 border-red-600 transition-all ease-linear;
+}
+
+.error-message {
+  @apply text-red-600 text-base;
+}
+
+.next-button {
+  @apply uppercase px-8 py-4 bg-purple-mid min-w-[158px] text-white font-bold rounded-[6px] cursor-pointer hover:bg-purple-light transition-all ease-linear;
+}
+
+.back-button {
+  @apply uppercase text-center px-8 py-4 border-2 w-[158px] text-purple-mid font-bold border-purple-mid rounded-[6px] cursor-pointer hover:opacity-80;
+}

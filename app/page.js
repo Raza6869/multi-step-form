@@ -1,5 +1,4 @@
 "use client";
-import ButtonSection from "@/components/buttons-section";
 import ContactForm from "@/components/contact-form";
 import StepSection from "@/components/step-section";
 import { ContactProvider } from "@/context/ContactProvider";
@@ -12,7 +11,6 @@ export default function Home() {
         <span id="divider" className="w-full bg-gray-100 h-[1px]"></span>
         <ContactProvider>
           <ContactForm />
-          <ButtonSection />
         </ContactProvider>
       </div>
     </main>
