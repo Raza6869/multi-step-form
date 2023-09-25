@@ -1,13 +1,8 @@
+import { useContactContext } from "@/hooks/useContactContext";
 import InputText from "./input-text";
-import { useForm } from "react-hook-form";
 
 export default function ContactForm() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const { register } = useContactContext();
 
   return (
     <form className="w-full flex flex-col gap-4">
