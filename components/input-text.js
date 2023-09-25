@@ -1,4 +1,4 @@
-export default function InputText({ labelText, id, placeholder, name }) {
+export default function InputText({ labelText, id, placeholder, name, style }) {
   return (
     <div className="flex flex-col gap-1">
       <label for={id} className="font-bold">
@@ -9,7 +9,7 @@ export default function InputText({ labelText, id, placeholder, name }) {
         placeholder={placeholder}
         id={id}
         name={name}
-        className=" h-[56px] py-2 px-4 rounded-[2px] border-2 hover:border-purple-mid transition-all ease-linear "
+        className={style}
       />
     </div>
   );
