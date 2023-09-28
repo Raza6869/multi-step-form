@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function ButtonSection() {
   const pathname = usePathname();
