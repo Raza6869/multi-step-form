@@ -1,3 +1,3 @@
-# Estudo de Desafio da Rocketseat
+# Study: Challenge of Multi Step Form 
 
-<p>Caso queira fazer este desafio, aqui o link <a>https://www.figma.com/community/file/1248257890741817885/formulario-multi-step-desafio-23</a></p>
+If you wanna do this challenge too, here is the link: https://www.figma.com/community/file/1248257890741817885/formulario-multi-step-desafio-23
