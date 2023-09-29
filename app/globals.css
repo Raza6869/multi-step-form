@@ -25,7 +25,7 @@
 }
 
 .error-message {
-  @apply text-red-600 text-base;
+  @apply text-red-600 text-sm;
 }
 
 .next-button {

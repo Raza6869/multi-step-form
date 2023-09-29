@@ -2,7 +2,12 @@ import { useContactContext } from "@/hooks/useContactContext";
 import ButtonSection from "@/components/buttons-section";
 
 export default function ContactForm() {
-  const { register, handleSubmit, onSubmit } = useContactContext();
+  const {
+    register,
+    handleSubmit,
+    onSubmit,
+    formState: { errors },
+  } = useContactContext();
 
   return (
     <form
@@ -18,9 +23,12 @@ export default function ContactForm() {
           placeholder="Como prefere ser chamado"
           id="name"
           name="contact"
-          className="input-text"
+          className={errors.name ? "input-text-error" : "input-text"}
           {...register("name")}
         />
+        {errors.name && (
+          <span className="error-message">{errors.name.message}</span>
+        )}
       </div>
       <div className="flex flex-col gap-1">
         <label for="phone" className="font-bold">
@@ -31,9 +39,12 @@ export default function ContactForm() {
           placeholder="Digite seu número do Whatsapp"
           id="phone"
           name="contact"
-          className="input-text"
+          className={errors.phone ? "input-text-error" : "input-text"}
           {...register("phone")}
         />
+        {errors.phone && (
+          <span className="error-message">{errors.phone.message}</span>
+        )}
       </div>
       <div className="flex flex-col gap-1">
         <label for="mail" className="font-bold">
@@ -44,10 +55,12 @@ export default function ContactForm() {
           placeholder="Digite seu e-mail"
           id="mail"
           name="contact"
-          className="input-text"
+          className={errors.mail ? "input-text-error" : "input-text"}
           {...register("mail")}
         />
-
+        {errors.mail && (
+          <span className="error-message">{errors.mail.message}</span>
+        )}
         <ButtonSection />
       </div>
     </form>
