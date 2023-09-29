@@ -2,7 +2,12 @@ import { useProjectContext } from "@/hooks/useProjectContext";
 import ButtonSection from "./buttons-section";
 
 export default function ProjectForm() {
-  const { register, handleSubmit, onSubmit } = useProjectContext();
+  const {
+    register,
+    handleSubmit,
+    onSubmit,
+    formState: { errors },
+  } = useProjectContext();
 
   return (
     <form
@@ -17,9 +22,12 @@ export default function ProjectForm() {
           placeholder="Descreva quais os objetivos desse projeto"
           id="objective"
           name="project"
-          className="input-area-text"
+          className={errors.objectives ? "input-text-error" : "input-text"}
           {...register("objectives")}
         />
+        {errors.objectives && (
+          <span className="error-message">{errors.objectives.message}</span>
+        )}
         <ButtonSection />
       </div>
     </form>

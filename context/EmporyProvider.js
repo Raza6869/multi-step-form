@@ -20,7 +20,7 @@ export function EmporyProvider({ children }) {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolvers: zodResolver(emporyUserFormSchema),
+    resolver: zodResolver(emporyUserFormSchema),
   });
   const onSubmit = (data) => console.log(data);
 
